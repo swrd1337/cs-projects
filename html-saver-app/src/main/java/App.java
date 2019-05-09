@@ -30,6 +30,7 @@ public class App extends Application {
     private Button display;
     private TextArea textArea;
     private GridPane rootGrid;
+    private String content;
 
     public void start(Stage primaryStage) {
         this.appStage = primaryStage;
@@ -37,6 +38,10 @@ public class App extends Application {
         Scene scene = new Scene(rootGrid, MIN_WIDTH, MIN_HEIGHT);
         primaryStage.setScene(scene);
         primaryStage.show();
+    }
+
+    public static void main(String[] args) {
+        launch(args);
     }
 
     private void firstPreparations() {
@@ -82,6 +87,7 @@ public class App extends Application {
 
     private void prepareTextArea() {
         textArea = new TextArea();
+        textArea.setEditable(false);
         textArea.setPrefWidth(MIN_WIDTH);
         textArea.setPrefHeight(MIN_WIDTH / 2);
     }
@@ -100,8 +106,7 @@ public class App extends Application {
     private void onDisplayActionUtil() {
         display.setOnAction(event -> {
             try {
-                String pageUrl = field.getText();
-                String content = getPageContent(pageUrl);
+                content = getContent();
                 textArea.setText(content);
             } catch (IOException e) {
                 textArea.setText(e.getMessage());
@@ -109,18 +114,25 @@ public class App extends Application {
         });
     }
 
-    private void savePageContent() throws IOException {
+    private String getContent() throws IOException {
         String pageUrl = field.getText();
-        String content = getPageContent(pageUrl);
+        return getPageContent(pageUrl);
+    }
+
+    private void savePageContent() throws IOException {
+        if (content == null) {
+            content = getContent();
+        }
         File file = getFileFromChooser();
         saveFile(content, file);
     }
 
     private void saveFile(String content, File file) throws FileNotFoundException {
-        PrintWriter writer;
-        writer = new PrintWriter(file);
-        writer.println(content);
-        writer.close();
+        if (file != null) {
+            PrintWriter writer = new PrintWriter(file);
+            writer.println(content);
+            writer.close();
+        }
     }
 
     private File getFileFromChooser() {
@@ -161,7 +173,9 @@ public class App extends Application {
 
     private void prepareAppStage() {
         appStage.setTitle("Html Saver");
-        appStage.getIcons().add(new Image("./resources/round_cloud_download.png"));
+        ClassLoader classLoader = getClass().getClassLoader();
+        URL resource = classLoader.getResource("round_cloud_download.png");
+        appStage.getIcons().add(new Image(resource.toString()));
         appStage.setWidth(MIN_WIDTH);
         appStage.setHeight(MIN_HEIGHT);
         appStage.setResizable(false);
