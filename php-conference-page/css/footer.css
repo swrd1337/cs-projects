@@ -1,0 +1,11 @@
+#footer {
+    display: flex;
+    margin-top: auto;
+    height: 3em;
+    background-color: #fc4445;
+    color: white;
+}
+
+#footer * {
+    margin: auto;
+}

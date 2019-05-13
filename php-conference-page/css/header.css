@@ -1,20 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-
-body {
+#header {
     display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-    font-family: 'Montserrat', sans-serif;
-    background-color: #ddfbfd;
+    flex-wrap: wrap;
+    background: #f8f8f8;
+    width: 100%;
+    border-bottom: 5px solid #fc4445;
 }
 
-#hedear {
-    display: flex;
-    margin: auto;
-}
-
-#hedear *{
+#header * {
     margin: auto;
 }
 
@@ -48,7 +40,7 @@ body {
 
 .page-title {
     background-color: #fc4445;
-    padding: 1em;
+    padding: 0.5em 2em;
     transition: 0.3s;
 }
 
@@ -58,6 +50,6 @@ body {
 
 .nav-item a:hover {
     background-color: #fc4445;
-    color: #3feee6;
+    color: #f8f8f8;
     text-shadow: 1px 2px rgba(0, 0, 0, 0.308);
 }
