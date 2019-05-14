@@ -1,0 +1,47 @@
+<?xml encoding="UTF-8"?>
+<!ELEMENT sheets (student)+>
+<!ATTLIST sheets xmlns CDATA #FIXED ''>
+<!ELEMENT student (personal_data,studies+,domains)>
+<!ATTLIST student xmlns CDATA #FIXED ''
+  id CDATA #REQUIRED>
+<!ELEMENT personal_data (full_name+,initials,cnp,birthday,birth_place,
+                         gender,address)>
+<!ATTLIST personal_data xmlns CDATA #FIXED ''>
+<!ELEMENT studies (institue_name,contry,city,degree,end_year,score)?>
+<!ATTLIST studies xmlns CDATA #FIXED ''
+  type NMTOKEN #REQUIRED>
+<!ELEMENT domains (name)>
+<!ATTLIST domains xmlns CDATA #FIXED ''>
+<!ELEMENT full_name (first_name,last_name)>
+<!ATTLIST full_name xmlns CDATA #FIXED ''
+  type NMTOKEN #REQUIRED>
+<!ELEMENT initials (#PCDATA)>
+<!ATTLIST initials xmlns CDATA #FIXED ''>
+<!ELEMENT cnp (#PCDATA)>
+<!ATTLIST cnp xmlns CDATA #FIXED ''>
+<!ELEMENT birthday (#PCDATA)>
+<!ATTLIST birthday xmlns CDATA #FIXED ''>
+<!ELEMENT birth_place (#PCDATA)>
+<!ATTLIST birth_place xmlns CDATA #FIXED ''>
+<!ELEMENT gender (#PCDATA)>
+<!ATTLIST gender xmlns CDATA #FIXED ''>
+<!ELEMENT address (#PCDATA)>
+<!ATTLIST address xmlns CDATA #FIXED ''>
+<!ELEMENT institue_name (#PCDATA)>
+<!ATTLIST institue_name xmlns CDATA #FIXED ''>
+<!ELEMENT contry (#PCDATA)>
+<!ATTLIST contry xmlns CDATA #FIXED ''>
+<!ELEMENT city (#PCDATA)>
+<!ATTLIST city xmlns CDATA #FIXED ''>
+<!ELEMENT degree (#PCDATA)>
+<!ATTLIST degree xmlns CDATA #FIXED ''>
+<!ELEMENT end_year (#PCDATA)>
+<!ATTLIST end_year xmlns CDATA #FIXED ''>
+<!ELEMENT score (#PCDATA)>
+<!ATTLIST score xmlns CDATA #FIXED ''>
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name xmlns CDATA #FIXED ''>
+<!ELEMENT first_name (#PCDATA)>
+<!ATTLIST first_name xmlns CDATA #FIXED ''>
+<!ELEMENT last_name (#PCDATA)>
+<!ATTLIST last_name xmlns CDATA #FIXED ''>

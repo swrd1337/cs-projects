@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- <!DOCTYPE sheets SYSTEM "validation.dtd">
+<sheets> -->
+<sheets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="schema.xsd">
+    <student id="1">
+        <personal_data>
+            <full_name type="original">
+                <first_name>John</first_name>
+                <last_name>Doe</last_name>
+            </full_name>
+            <full_name type="actual">
+                <first_name>John</first_name>
+                <last_name>Doe</last_name>
+            </full_name>
+            <initials>I.</initials>
+            <cnp>111111111111</cnp>
+            <birthday>11.04.1994</birthday>
+            <birth_place>Somewhere</birth_place>
+            <gender>M.</gender>
+            <address>Str. Freedom</address>
+        </personal_data>
+        <studies type="school">
+            <institue_name>School</institue_name>
+            <contry>Moldova</contry>
+            <city>Chisinau</city>
+            <degree>Bachelor</degree>
+            <end_year>2012</end_year>
+            <score>10</score>
+        </studies>
+        <studies type="university"/>
+        <domains>
+            <name>Computer Science</name>
+        </domains>
+    </student>
+    <student id="1">
+        <personal_data>
+            <full_name type="original">
+                <first_name>John</first_name>
+                <last_name>Doe</last_name>
+            </full_name>
+            <full_name type="actual">
+                <first_name>John</first_name>
+                <last_name>Doe</last_name>
+            </full_name>
+            <initials>I.</initials>
+            <cnp>111111111111</cnp>
+            <birthday>11.04.1994</birthday>
+            <birth_place>Somewhere</birth_place>
+            <gender>M.</gender>
+            <address>Str. Freedom</address>
+        </personal_data>
+        <studies type="school">
+            <institue_name>School</institue_name>
+            <contry>Moldova</contry>
+            <city>Chisinau</city>
+            <degree>Bachelor</degree>
+            <end_year>2012</end_year>
+            <score>10</score>
+        </studies>
+        <studies type="university">
+            <institue_name>Local University</institue_name>
+            <contry>Moldova</contry>
+            <city>Chisinau</city>
+            <degree>Graduate</degree>
+            <end_year>2015</end_year>
+            <score>10</score>
+        </studies>
+        <domains>
+            <name>Computer Science</name>
+        </domains>
+    </student>
+</sheets>
