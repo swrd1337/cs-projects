@@ -49,9 +49,9 @@ include "comps/header.php";
         }
     } else if ($action == "update") {
         $id = $_REQUEST["id"];
-        $name = mysqli_real_escape_string($conexion_id, $_REQUEST["name"]);
-        $mail =  mysqli_real_escape_string($conexion_id, $_REQUEST["mail"]);
-        $number =  mysqli_real_escape_string($conexion_id, $_REQUEST["number"]);
+        $name = htmlspecialchars(mysqli_real_escape_string($conexion_id, $_REQUEST["name"]));
+        $mail =  htmlspecialchars(mysqli_real_escape_string($conexion_id, $_REQUEST["mail"]));
+        $number =  htmlspecialchars(mysqli_real_escape_string($conexion_id, $_REQUEST["number"]));
 
         if (!empty($name) && !empty($mail) && !empty($number)) {
             $sql = "UPDATE participants SET name='$name', mail='$mail', number='$number' WHERE id=$id";

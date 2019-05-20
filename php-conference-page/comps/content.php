@@ -26,9 +26,9 @@ if (isset($action)) {
         </div>
         <?php
     } else if ($action == "participate") {
-        $name = mysqli_real_escape_string($conexion_id, $_REQUEST["name"]);
-        $mail =  mysqli_real_escape_string($conexion_id, $_REQUEST["mail"]);
-        $number =  mysqli_real_escape_string($conexion_id, $_REQUEST["number"]);
+        $name = htmlspecialchars(mysqli_real_escape_string($conexion_id, $_REQUEST["name"]));
+        $mail =  htmlspecialchars(mysqli_real_escape_string($conexion_id, $_REQUEST["mail"]));
+        $number =  htmlspecialchars(mysqli_real_escape_string($conexion_id, $_REQUEST["number"]));
         if(empty($name) || empty($mail) || !is_numeric($number)) {
             echo "  <div class=\"dialog-container\">
                         <div class=\"dialog\">

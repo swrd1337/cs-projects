@@ -28,8 +28,8 @@ include "comps/header.php";
 $action = $_REQUEST["action"];
 if (isset($action)) {
     if ($action == "add") {
-        $title = mysqli_real_escape_string($conexion_id, $_REQUEST["title"]);
-        $content =  mysqli_real_escape_string($conexion_id, $_REQUEST["content"]);
+        $title = htmlspecialchars(mysqli_real_escape_string($conexion_id, $_REQUEST["title"]));
+        $content =  htmlspecialchars(mysqli_real_escape_string($conexion_id, $_REQUEST["content"]));
 
         if (empty($title) || empty($content)) {
             echo "  <div class=\"dialog-container\">
@@ -72,8 +72,8 @@ if (isset($action)) {
 
     } else if ($action == "update") {
         $id = $_REQUEST["id"];
-        $title = mysqli_real_escape_string($conexion_id, $_REQUEST["title"]);
-        $content =  mysqli_real_escape_string($conexion_id, $_REQUEST["content"]);
+        $title = htmlspecialchars(mysqli_real_escape_string($conexion_id, $_REQUEST["title"]));
+        $content =  htmlspecialchars(mysqli_real_escape_string($conexion_id, $_REQUEST["content"]));
 
         if (!empty($title) && !empty($content)) {
             $sql = "UPDATE articles SET title='$title', content='$content' WHERE id=$id";
