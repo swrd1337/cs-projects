@@ -112,7 +112,7 @@ if (isLogged()) {
     <input name="action" type="hidden" value="add" />
     Title: <input type="text" name="title" />
     Content: <textarea rows="10" cols="60" name="content"></textarea>
-    <input class="content-button" type="submit" value="Adauga" />
+    <input class="content-button" type="submit" value="Add new post" />
 </form>
 
 <?php
