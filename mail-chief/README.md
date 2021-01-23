@@ -1,28 +1,12 @@
 # Mail Chief :email:
 
-Simple mail-client app written in Java using JavaFx.
-
-This app allow to manipulate multiple mail accounts (*check inbox, send new mail and so on*).
+Simple mail-client app developed using Java and JavaFx.
 
 ## Getting Started
-
-Clone this repository.
-
-```
-git clone https://github.com/swrd1337/mail-chief.git
-```
-
-After run this project in Intellij/Eclipse.
-
-### Installing
-
-Install and update all dependecies of this project.
 
 ```
 mvn clean install -U
 ```
-
-If you have installed Java 11, install JavaFx manually or using maven.
 
 ## TODO List
 
@@ -36,10 +20,6 @@ If you have installed Java 11, install JavaFx manually or using maven.
 * [Gson](https://github.com/google/gson) - Working with Json files.
 * [jsoup](https://jsoup.org/) - Java library for working with real-world HTML.
 
-## Authors
+<br>
 
-* **Bunazov Alexei** - *Idea and development* - [swrd1337](https://github.com/swrd1337)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Developed by [swrd1337](https://github.com/swrd1337)
