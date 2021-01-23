@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<head>
+    <title>s u r v i v e</title>
+    <link rel="shortcut icon" href="icon.jpg" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="canvas.css"/>
+</head>
+<html>
+    <body onload="draw()">  
+        <div id="action-container">
+            <button id="start" class="action-tag">START</button>
+            <button id="stop" class="action-tag">STOP</button>
+            <button id="restart" class="action-tag">RESTART</button>
+            <input id="input-enemies-nr" class="action-tag" type="text" value="100" placeholder="Nr. of enemies..."/>
+            <input id="enemies-size" class="action-tag" type="text" placeholder="Enemies size 0 - 50"/>
+            <button id="auto-manual" class="action-tag">AUTO</button>
+            <button id="hide-mouse" class="action-tag">HIDE MOUSE</button>
+            
+            <img id="onime" src="giphy.gif" height="50"/>
+        </div>
+        
+        <div id="canvas-div">  
+            <canvas id="ball-survive"></canvas>
+        </div>
+        
+        <script src="game-canvas.js" type="text/javascript"></script>
+        <script src="ball-class.js" type="text/javascript"></script>
+        <script src="player-logic.js" type="text/javascript"></script>
+        <script src="enemy-logic.js" type="text/javascript"></script>
+        <script src="local-logic.js" type="text/javascript"></script>
+        <script src="game-score.js" type="text/javascript"></script>
+        <script src="game.js" type="text/javascript"></script>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+.vscode/
+waifu-cnn/kawai-data/
+waifu-cnn/kawai-data/
+waifu-cnn/kawai-data/
+waifu-cnn/test/
+waifu-cnn/prediction/
+waifu-cnn/__pycache__/
+node_modules/

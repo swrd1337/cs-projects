@@ -1,0 +1,54 @@
+body{
+    background: #a5799a;
+}
+
+#ball-survive {
+    background: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 6px;
+    padding-left: 0;
+    padding-right: 0;
+    box-shadow: 12px 12px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+#action-container {
+    text-align: center;
+    font-size: 30px;
+}
+
+.action-tag {
+    font-family: Comic Sans MS;
+    font-weight: bold;
+    background-color: rgb(255, 254, 254);
+    border: 2px solid #9c4a88;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    padding: 5px 15px 5px 15px;
+}
+
+#auto-manual {
+    background-color: #fdc7e2;
+}
+
+#start:hover, #stop:hover, #restart:hover, #auto-manual:hover, #hide-mouse:hover {
+    color: white;
+    background-color: #a5799a;
+}
+
+#input-enemies-nr {
+    width: 100px;
+}
+
+#enemies-size {
+    width: 135px;
+}
+
+#onime {
+    position: absolute;
+    margin-top: 1px;
+    margin-left: 10px;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.5);
+}
