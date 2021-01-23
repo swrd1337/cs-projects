@@ -1,37 +1,25 @@
-# Ball surviving!
+# Ball surviving game!
 
-In some big world, with big creatures, like balls, small creatures tries to survive and grow up. Enemies 👾 has an "AI" and so on. Maybe it's **Agar.io** 🌝 clone...
+Enemies 👾 has an dummy 'AI'. Player can be controlled manually or by another dummy AI :(
 
-Tested on - **Live Server**.
-
-Try it: https://surviving-balls.herokuapp.com/
+Live Demo: https://surviving-balls.herokuapp.com/
 
 
 ### Installing
 
-If you want to run this "game"...
-
-Clone repository:
-
 ```
-git clone https://github.com/swrd1337/ball-surviving-game
-
 npm install
 
-npm start
+node server.js
 
 ```
-
-Game will ron on `http://localhost:8080/
+Default URL:  ```http://localhost:8080/```
 
 ## TODO List
 
-* Respawn balls after death.
+* Improve AI.
+* Iprove enemy movements.
 
-## Authors
+<br>
 
-* **Bunazov Alexei** - *Idea and development* - [swrd1337](https://github.com/swrd1337)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+Developed by [swrd1337](https://github.com/swrd1337)
