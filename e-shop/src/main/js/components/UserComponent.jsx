@@ -355,9 +355,9 @@ export default function UserComponent(props) {
                         value={category}
                         onChange={handleCategorySelection}
                     >
-                        {categories.map(category => (
-                            <MenuItem key={category.id} value={category.id}>
-                                {category.name}
+                        {categories.map(cat => (
+                            <MenuItem key={cat.id} value={cat.id}>
+                                {cat.name}
                             </MenuItem>
                         ))}
                     </CustomTextField>
@@ -416,9 +416,9 @@ export default function UserComponent(props) {
                         value={categoryToRemove}
                         onChange={handleCategoryToRemove}
                     >
-                        {categories.map(category => (
-                            <MenuItem key={category.id} value={category.id}>
-                                {category.name}
+                        {categories.map(cat => (
+                            <MenuItem key={cat.id} value={cat.id}>
+                                {cat.name}
                             </MenuItem>
                         ))}
                     </CustomTextField>

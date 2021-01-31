@@ -177,8 +177,9 @@ public class ProductController {
         String randomString = RandomString.make(10);
         String sessionId = RequestContextHolder.currentRequestAttributes().getSessionId();
         String hex = DigestUtils.sha256Hex(sessionId);
-        String extension = img.getOriginalFilename().split("\\.")[1];
-        if (extension != null) {
+        String originalFilename = img.getOriginalFilename();
+        if (originalFilename != null) {
+            String extension = originalFilename.split("\\.")[1];
             String filename = "products/" + randomString + hex + "." + extension;
             File upl = new File(filename);
             boolean fileCreated = upl.createNewFile();

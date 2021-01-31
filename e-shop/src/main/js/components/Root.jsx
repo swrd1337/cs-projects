@@ -51,7 +51,6 @@ export default function Root() {
     const [isDrawerOpen, setDrawerOpen] = useState(false);
     const [category, setCategory] = useState(null);
     const [user, setUser] = useState(null);
-    const [reload, setReload] = useState(false);
     const [basket, setBasket] = useState(null);
 
     useEffect(() => {

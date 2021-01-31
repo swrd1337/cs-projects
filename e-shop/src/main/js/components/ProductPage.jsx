@@ -130,8 +130,8 @@ export default function ProductPage(props) {
             if (response.ok) {
                 return response.json();
             }
-        }).then(data => {
-            setReviews(data);
+        }).then(resData => {
+            setReviews(resData  );
         })
     };
 

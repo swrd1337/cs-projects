@@ -5,40 +5,9 @@ import Link from '@material-ui/core/Link';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
-import { PRIMARY_1, PRIMARY_2 } from '../../constants/Colors';
 import CustomTextField from './CustomTextField';
-
-const useStyles = makeStyles(theme => ({
-    paper: {
-        margin: theme.spacing(8, 4),
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-    },
-    avatar: {
-        margin: theme.spacing(1),
-        backgroundColor: PRIMARY_1,
-    },
-    form: {
-        marginTop: theme.spacing(1),
-    },
-    rememberMe: {
-        color: `${PRIMARY_2} !important`,
-    },
-    submit: {
-        margin: theme.spacing(3, 0, 2),
-        borderRadius: '0',
-        backgroundColor: PRIMARY_2,
-        '&:hover': {
-            backgroundColor: PRIMARY_1,
-        }
-    },
-    link: {
-        color: PRIMARY_1,
-    }
-}));
+import { useStyles } from './useStyles';
 
 
 export default function Login(props) {

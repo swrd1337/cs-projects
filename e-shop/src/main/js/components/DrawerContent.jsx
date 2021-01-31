@@ -13,14 +13,13 @@ const useStyles = makeStyles({
 export default function DrawerContent(props) {
     const { category, setCategory, setDrawerOpen } = props;
     const classes = useStyles();
-    const [reload, setReload] = useState(false);
     const [categories, setCategories] = useState([]);
     const [selectedIndex, setSelectedIndex] = useState(category ? category.id : 0);
 
-    const handleListItemClick = (event, category) => {
-        setSelectedIndex(category.id);
-        if (category.id) {
-            setCategory(category);
+    const handleListItemClick = (event, selectedCategory) => {
+        setSelectedIndex(selectedCategory.id);
+        if (selectedCategory.id) {
+            setCategory(selectedCategory);
         } else {
             setCategory(null);
         }
@@ -37,7 +36,7 @@ export default function DrawerContent(props) {
         }).then(data => {
             setCategories(data);
         })
-    }, [reload]);
+    }, []);
 
     return (
         <List component='nav' className={classes.nav}>
@@ -50,14 +49,14 @@ export default function DrawerContent(props) {
                 <ListItemText primary='All items'/>
             </ListItem>
             {
-                categories.map(category => 
+                categories.map(cat => 
                     <ListItem 
                         button 
-                        key={category.id}
-                        selected={selectedIndex === category.id}
-                        onClick={e => handleListItemClick(e, category)}
+                        key={cat.id}
+                        selected={selectedIndex === cat.id}
+                        onClick={e => handleListItemClick(e, cat)}
                     >
-                        <ListItemText primary={category.name}/>
+                        <ListItemText primary={cat.name}/>
                     </ListItem>
                 )
             }

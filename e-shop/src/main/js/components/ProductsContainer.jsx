@@ -47,9 +47,10 @@ export default function ProductsContainer(props) {
     
     const [products, setProducts] = useState([]);
     const [page, setPage] = useState(0);
-    const [size, setSize] = useState(9);
     const [open, setOpen] = useState(false);
     const [product, setProduct] = useState(null);
+
+    const size = 9;
 
     const handleClose = () => {
         setProduct(null);
@@ -97,16 +98,16 @@ export default function ProductsContainer(props) {
                 </Typography>
             </Grid>
             {
-                products.map(product => <Product 
-                                            key={product.id}
-                                            data={product}
-                                            setProduct={setProduct}
-                                            setDialogOpen={setOpen}
-                                            user={props.user}
-                                            getProducts={getProducts}
-                                            basket={basket}
-                                            getBasketItems={getBasketItems}
-                                        />)
+                products.map(p => <Product 
+                                        key={p.id}
+                                        data={p}
+                                        setProduct={setProduct}
+                                        setDialogOpen={setOpen}
+                                        user={props.user}
+                                        getProducts={getProducts}
+                                        basket={basket}
+                                        getBasketItems={getBasketItems}
+                                    />)
             }
             {
                 products.length && (
