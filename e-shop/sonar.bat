@@ -1,0 +1,1 @@
+mvn sonar:sonar -Dsonar.login=0339814e86a2970fad5a638d2c002c860606652b && node sonar-project.js
