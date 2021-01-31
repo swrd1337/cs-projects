@@ -26,15 +26,11 @@ public class UserPrincipalDetailsService implements UserDetailsService {
      * @throws UsernameNotFoundException Failed to load user.
      */
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+    public UserDetails loadUserByUsername(String username) {
         User user = userService.getUserByEmail(username);
-
         if (user == null) {
             throw new UsernameNotFoundException("Invalid username");
         }
-
-        UserPrincipal userPrincipal = new UserPrincipal(user);
-
-        return userPrincipal;
+        return new UserPrincipal(user);
     }
 }

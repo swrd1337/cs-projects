@@ -5,11 +5,14 @@ import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 @Data
 @NoArgsConstructor
 @Entity(name = "users")
-public class User {
+public class User implements Serializable {
+
+    private static final long serialVersionUID = 1337L;
 
     @Id
     @Column(name = "userId")
@@ -29,10 +32,11 @@ public class User {
     private String avatarUrl;
 
     public User(String nickname, String email, String password, String role, String avatarUrl) {
-        setNickname(nickname);
-        setEmail(email);
-        setPassword(password);
-        setRole(role);
-        setAvatarUrl(avatarUrl);
+        this.nickname = nickname;
+        this.email = email;
+        this.password = password;
+        this.role = role;
+        this.avatarUrl = avatarUrl;
     }
+
 }

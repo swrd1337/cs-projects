@@ -8,8 +8,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-// TODO: Basket and favourites.
-
 /**
  * {@link Category} controller.
  */

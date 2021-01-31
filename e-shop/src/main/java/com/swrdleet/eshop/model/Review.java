@@ -51,10 +51,10 @@ public class Review {
      * @param content Review content.
      */
     public Review(Product product, String content, String avatarUrl, String userNickname) {
-        setProduct(product);
-        setContent(content);
-        setAvatarUrl(avatarUrl);
-        setUserNickname(userNickname);
+       this.product = product;
+       this.content = content;
+       this.avatarUrl = avatarUrl;
+       this.userNickname = userNickname;
     }
 
 }

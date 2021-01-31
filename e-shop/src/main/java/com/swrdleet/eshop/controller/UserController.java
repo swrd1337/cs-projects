@@ -2,6 +2,7 @@ package com.swrdleet.eshop.controller;
 
 import com.swrdleet.eshop.dto.UserDTO;
 import com.swrdleet.eshop.dto.UserResultDTO;
+import com.swrdleet.eshop.security.UserAlreadyExistsException;
 import com.swrdleet.eshop.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +22,7 @@ public class UserController {
     private UserService userService;
 
     @PostMapping("/public/api/user")
-    public void addUser(@RequestBody UserDTO userInfo) {
+    public void addUser(@RequestBody UserDTO userInfo) throws UserAlreadyExistsException {
         userService.addUser(userInfo);
     }
 

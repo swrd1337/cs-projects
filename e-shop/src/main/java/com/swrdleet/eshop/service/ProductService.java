@@ -153,7 +153,7 @@ public class ProductService {
      */
     public List<Product> getAllFromBasket(Long userId) {
         List<BasketProduct> allByUserId = basketProductRepository.findAllByUserId(userId);
-        List<Long> list = allByUserId.stream().map(a -> a.getProductId()).collect(Collectors.toList());
+        List<Long> list = allByUserId.stream().map(BasketProduct::getProductId).collect(Collectors.toList());
         Iterable<Product> products = productRepository.findAllById(list);
         List<Product> result = new ArrayList<>();
         products.forEach(result::add);

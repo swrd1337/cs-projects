@@ -178,13 +178,18 @@ public class ProductController {
         String sessionId = RequestContextHolder.currentRequestAttributes().getSessionId();
         String hex = DigestUtils.sha256Hex(sessionId);
         String extension = img.getOriginalFilename().split("\\.")[1];
-        String filename = "products/" + randomString + hex + "." + extension;
-        File upl = new File(filename);
-        upl.createNewFile();
-        FileOutputStream os = new FileOutputStream(upl);
-        os.write(img.getBytes());
-        os.close();
-        return filename;
+        if (extension != null) {
+            String filename = "products/" + randomString + hex + "." + extension;
+            File upl = new File(filename);
+            boolean fileCreated = upl.createNewFile();
+            if (fileCreated) {
+                try(FileOutputStream os = new FileOutputStream(upl)) {
+                    os.write(img.getBytes());
+                }
+            }
+            return filename;
+        }
+        throw new IOException("Cannot save image!");
     }
 
 }

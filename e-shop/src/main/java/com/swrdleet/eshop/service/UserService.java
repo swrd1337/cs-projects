@@ -4,6 +4,7 @@ import com.swrdleet.eshop.dto.UserDTO;
 import com.swrdleet.eshop.dto.UserResultDTO;
 import com.swrdleet.eshop.model.User;
 import com.swrdleet.eshop.repository.UserRepository;
+import com.swrdleet.eshop.security.UserAlreadyExistsException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -23,12 +24,12 @@ public class UserService {
         return userRepository.findByEmail(email);
     }
 
-    public void addUser(UserDTO userInfo) {
+    public void addUser(UserDTO userInfo) throws UserAlreadyExistsException {
         String email = userInfo.getEmail();
         User existingUser = userRepository.findByEmail(email);
 
         if (existingUser != null && existingUser.getEmail().equals(email)) {
-            throw new RuntimeException("User with this e-mail address already exists.");
+            throw new UserAlreadyExistsException("User with this e-mail address already exists.");
         }
 
         String nickname = userInfo.getNickname();
