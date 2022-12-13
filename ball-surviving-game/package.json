@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/swrd1337/ball-surviving-game#readme",
   "dependencies": {
-    "express": "^4.17.1"
+    "express": "^4.17.3"
   },
   "engines": {
     "node": "12.13.1"
